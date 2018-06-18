@@ -93,8 +93,7 @@
 
             <div class="text-center py-4 mt-3">
 
-
-                <a class="btn btn-grey btn-rounded z-depth-1a" id="alert-target" type="submit" >Submit</a>
+                <a class="btn btn-grey btn-rounded z-depth-1a" id="alert-target" type="submit">Submit</a>
 
             </div>
 
@@ -121,19 +120,25 @@
             var email=$('#PassengerEmail').val();
             console.log(email);
             if(/(\W|^)[\w.+\-]*@gmail\.com(\W|$)/ig.test(email)){
-                alert("Hello! I am an alert box!!");
+                swal('user details recorded.....');
+
+                setTimeout(function(){  $("#RegistrationForm").submit(); }, 3000);
 
 
 
-                setTimeout(function() {
-                }, 3000);
-
-
-                $("#RegistrationForm").submit();
             }
             else {
-                alert("error..email id should be gmail only");
-                location.reload(true);
+                swal("error......email should be by gmail");
+                document.getElementById('PassengerEmail').value="";
+                document.getElementById('PassengerEmail').focus();
+
+                console.log(email);
+
+
+
+
+
+
             }
 
 

@@ -5,13 +5,15 @@
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "delay": "^3.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "faker": "^4.1.0",
     "firebase": "^4.12.1",
     "mongoose": "^5.0.13",
-    "nodemailer": "^4.6.7"
+    "nodemailer": "^4.6.7",
+    "sweetalert": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {

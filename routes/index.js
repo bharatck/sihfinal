@@ -36,6 +36,14 @@ router.all('/*',(req,res,next)=>{
 });
 
 router.get('/',(req,res)=>{
+    req.app.locals.layout='background';
+
+    res.render('home');
+
+});
+
+router.get('/book',(req,res)=>{
+    req.app.locals.layout='main';
 
     res.render('home');
 
@@ -141,7 +149,7 @@ router.post('/generate-ticket',(req,res)=> {
     });
     
 
-    res.redirect('/');
+    res.redirect('/book');
 });
 
 
