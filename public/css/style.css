@@ -1,0 +1,70 @@
+/* Your custom styles */
+
+
+
+
+
+.card{
+
+	width: cover;
+	height: cover;
+	background: rgb(0,0,0);
+	color: #FFF;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.card1{
+	border-radius: 15px;
+	width: 40%;
+	height: cover;
+	background:rgb(0,0,0);
+	color: #FFF;
+	opacity: 0.95;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	
+}
+
+html,
+body,
+#intro{
+	height: 100%;
+}
+
+#intro{
+
+	background: url("http://www.baltana.com/files/wallpapers-5/Gradient-Background-HD-Wallpaper-16352.jpg");
+	webkit background size: cover;
+	-mz-background-size: cover;
+	o background-size: cover;
+	background-size: cover;	
+}
+.container-fluid{
+
+	background-color: #c9b7b3;
+	position: absolute;
+	align-content: center;
+	box-sizing: border-box;
+}
+
+.progress{
+
+	height: 20%;
+	color: blue;
+}
+
+.progress bar{
+
+	color: blue;
+	height: 20%;
+	
+}

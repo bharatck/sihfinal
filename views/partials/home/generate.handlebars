@@ -1,0 +1,127 @@
+
+<!--Main Navigation-->
+<header>
+
+
+
+
+</header>
+<!--Main Navigation-->
+
+
+
+<div id="intro" class="view">
+
+    <div class="full-bg-img">
+    </div>
+</div>
+
+<!-- Card -->
+<div class="card1">
+
+    <!-- Card body -->
+    <div class="card-body">
+
+        <!-- Material form register -->
+        <form id="RegistrationForm" method="post" action="/generate-ticket">
+            <!--<p class="h4 text-center py-4">Register</p>-->
+
+
+
+            <!--new code trying -->
+
+
+            <div style="margin-left: 35%;">
+
+                <!--Header-->
+
+                <div class="modal-header" style="border: none">
+                    <h4 class="title">
+                        <i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Register</h4>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Material input text -->
+            <div class="md-form">
+                <i class="fa fa-user-circle prefix"></i>
+                <input type="text" style="color: whitesmoke" name="name" class="form-control" placeholder="Enter passenger Name">
+                <label class="font-weight-light"></label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-id-card prefix"></i>
+                <input type="text" style="color: whitesmoke" name="id" class="form-control" placeholder="Enter Booking Id">
+                <label class="font-weight-light"></label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-envelope prefix"></i>
+                <input type="email" style="color: whitesmoke"  name="PassengerEmail" class="form-control" placeholder="Enter  email">
+                <label class="font-weight-light"></label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-mobile-phone prefix"></i>
+                <input type="text" style="color: whitesmoke" name="number" class="form-control" placeholder="Enter  Phone No">
+                <label class="font-weight-light"></label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-plane prefix"></i>
+                <input type="text" style="color: whitesmoke" name="source" id="materialFormCardInfoEx" class="form-control form-control-sm" placeholder="Source">
+                <label></label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-map-marker prefix"></i>
+                <input type="text" style="color: whitesmoke" name="destination" id="materialFormCardInfoEx" class="form-control form-control-sm" placeholder="Destination">
+                <label></label>
+            </div>
+            <!-- Material input email -->
+            <div class="md-form">
+                <i class="fa fa-shopping-bag prefix"></i>
+                <input type="text" style="color: whitesmoke" name="numberOfBags" id="materialFormCardInfoEx" class="form-control" placeholder="NoOfBags">
+                <label for="materialFormCardInfoEx" class="font-weight-light"></label>
+            </div>
+
+            <div class="text-center py-4 mt-3">
+
+
+                <a class="btn btn-grey btn-rounded z-depth-1a" id="alert-target" type="submit" >Submit</a>
+
+            </div>
+
+
+
+
+        </form>
+        <!-- Material form register -->
+
+        <!-- Card body -->
+
+    </div>
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+
+
+    <script type="text/javascript">
+
+        $("#alert-target").click(function () {
+            //toastr.options.timeOut = 1500; // 1.5s
+            //toastr.info('user added successfully!');
+            alert("User details recorded");
+
+            setTimeout(function() {
+            }, 3000);
+
+            $("#RegistrationForm").submit();
+
+        });
+
+    </script>
