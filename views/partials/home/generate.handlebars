@@ -61,9 +61,11 @@
 
             <div class="md-form">
                 <i class="fa fa-envelope prefix"></i>
-                <input type="email" style="color: whitesmoke"  name="PassengerEmail" class="form-control" placeholder="Enter  email">
+                <input type="email" style="color: whitesmoke" id="PassengerEmail"  name="PassengerEmail" class="form-control" placeholder="Enter  email">
                 <label class="font-weight-light"></label>
             </div>
+            <p>Don't have a gmail account? <a href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp"> click here to create an account</a> </p>
+
 
             <div class="md-form">
                 <i class="fa fa-mobile-phone prefix"></i>
@@ -112,15 +114,31 @@
 
     <script type="text/javascript">
 
+
         $("#alert-target").click(function () {
             //toastr.options.timeOut = 1500; // 1.5s
             //toastr.info('user added successfully!');
-            alert("User details recorded");
+            var email=$('#PassengerEmail').val();
+            console.log(email);
+            if(/(\W|^)[\w.+\-]*@gmail\.com(\W|$)/ig.test(email)){
+                alert("Hello! I am an alert box!!");
 
-            setTimeout(function() {
-            }, 3000);
 
-            $("#RegistrationForm").submit();
+
+                setTimeout(function() {
+                }, 3000);
+
+
+                $("#RegistrationForm").submit();
+            }
+            else {
+                alert("error..email id should be gmail only");
+                location.reload(true);
+            }
+
+
+
+
 
         });
 

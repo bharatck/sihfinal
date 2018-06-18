@@ -3,9 +3,21 @@ const router=express.Router();
 const Ticket=require('../models/ticket');
 const Bags=require('../models/Bags');
 const faker=require('faker');
+var nodemailer = require('nodemailer');
 
 
 var firebase=require('firebase');
+
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'gstino060@gmail.com',
+        pass: 'smart123!@#'
+    }
+});
+
+
+
 
 firebase.initializeApp({
     serviceAccount: "testing-eb3a3f6683ae.json",
@@ -108,31 +120,30 @@ router.post('/generate-ticket',(req,res)=> {
 
         active.set(obj);
 
+        console.log(newTicket.TicketNumber);
+        console.log(newTicket.Email);
+        var mailOptions = {
+            from: 'gstino060@gmail.com',
+            to: newTicket.Email,
+            subject: 'Your booking id for ticket',
+            text: newTicket.TicketNumber.toString()
+        };
+
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+
+
     });
+    
 
     res.redirect('/');
 });
 
-
-router.post("/add-up-database",(req,res)=>{
-
-
-    var user;
-    ref.on('value', function (snap) {
-        user = snap.val();
-
-    // Keep the local user object synced with the Firebase userRef
-
-    console.log(user);
-
-});
-
-
-
-
-
-
-});
 
 
 
